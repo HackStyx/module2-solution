@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .section {
+    box-sizing: border-box;
+    border: 1px solid #000;
+    margin: 10px;
+    padding: 20px;
+    position: relative;
+    width: 100%; /* Full width by default for mobile view */
+  }
+  
+  .section-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #555;
+    color: white;
+    padding: 5px 10px;
+    box-sizing: border-box;
+  }
+  
+  /* Desktop view - All sections in a single row */
+  @media (min-width: 992px) {
+    .section {
+      width: 30%; /* Adjust the width as needed */
+      float: left;
+    }
+  }
+  
+  /* Tablet view - Two boxes in a row, remaining below them */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .section {
+      width: 48%; /* Adjust the width as needed */
+      margin-bottom: 20px;
+    }
+    .section:nth-child(3) {
+      width: 100%;
+      clear: both;
+    }
+  }
+  
+  /* Mobile view - All boxes in a column */
+  @media (max-width: 767px) {
+    .section {
+      width: 100%;
+    }
+  }
+  
